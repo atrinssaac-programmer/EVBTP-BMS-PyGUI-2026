@@ -17,7 +17,7 @@ from typing import Optional, List, Dict, Any, Final
 from PySide6.QtWidgets import (
     QMainWindow, QApplication, QWidget, QVBoxLayout, QHBoxLayout,
     QGridLayout, QGroupBox, QFrame, QLabel, QPushButton,
-    QComboBox, QScrollArea, QInputDialog, QMessageBox
+    QComboBox, QScrollArea, QInputDialog, QMessageBox, QSizePolicy
 )
 from PySide6.QtCore import Qt, QTimer, Signal
 from PySide6.QtGui import QIcon, QPixmap, QFont
