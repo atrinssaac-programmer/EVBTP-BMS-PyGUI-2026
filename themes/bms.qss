@@ -1,23 +1,218 @@
-/* # minimal industrial style */
+/* ================================================================
+   EV Blue Theme - BMS Dashboard
+   Industrial blue theme with professional appearance
+   ================================================================ */
+
+/* ----- Main Window & Containers ----- */
+QMainWindow {
+    background-color: #0a1628;
+}
+
+QScrollArea {
+    border: none;
+    background-color: #0a1628;
+}
+
+QWidget {
+    color: #e0e8f0;
+    background-color: #0a1628;
+}
+
+/* ----- Group Boxes ----- */
+QGroupBox {
+    border: 2px solid #1e3a5f;
+    border-radius: 8px;
+    margin-top: 12px;
+    padding-top: 12px;
+    font-weight: bold;
+    background-color: #0d1f3a;
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    left: 10px;
+    padding: 0px 6px;
+    color: #4da6ff;
+}
+
+/* ----- Frames (used for tile blocks) ----- */
+QFrame {
+    border: 1px solid #1e3a5f;
+    border-radius: 4px;
+    background-color: #0d1f3a;
+}
+
+/* ----- Title & Department Labels ----- */
 QLabel#title {
-    font-size:24px;
-    font-weight:bold;
+    color: #4da6ff;
+    font-size: 24px;
+    font-weight: bold;
+    background: transparent;
 }
 
 QLabel#deptitle {
-    font-size:14px;
+    color: #5a7a9a;
+    font-size: 12pt;
+    background: transparent;
+}
+
+/* ----- Status-based label colors ----- */
+QLabel[status="critical"] {
+    color: #ff4d4d;
     font-weight: bold;
-    font-style: italic;
 }
 
-QLabel#value {
-    font-size:16px;
-    font-weight:bold;
+QLabel[status="warning"] {
+    color: #ffa500;
+    font-weight: bold;
 }
 
-QProgressBar {
-    height:22px;
+QLabel[status="normal"] {
+    color: #4dff88;
 }
 
-QLabel[state="warn"] { color: orange; }
-QLabel[state="alarm"] { color: red; }
+/* ----- Buttons ----- */
+QPushButton {
+    border-radius: 5px;
+    padding: 6px 12px;
+    border: 1px solid #1e3a5f;
+    background-color: #1a3a5c;
+    color: #e0e8f0;
+    font-weight: 500;
+}
+
+QPushButton:hover {
+    border: 1px solid #4da6ff;
+    background-color: #2a4a6c;
+}
+
+QPushButton:pressed {
+    background-color: #0a2a4a;
+}
+
+QPushButton:disabled {
+    color: #5a7a9a;
+    border-color: #2a3a4a;
+}
+
+/* Specific button identifiers */
+QPushButton#connectBtn {
+    background-color: #006644;
+    border-color: #008866;
+}
+QPushButton#connectBtn:hover {
+    background-color: #008866;
+}
+
+QPushButton#disconnectBtn {
+    background-color: #880000;
+    border-color: #aa0000;
+}
+QPushButton#disconnectBtn:hover {
+    background-color: #aa0000;
+}
+
+QPushButton#startBtn {
+    background-color: #0044aa;
+    border-color: #0066cc;
+}
+QPushButton#startBtn:hover {
+    background-color: #0066cc;
+}
+
+QPushButton#stopBtn {
+    background-color: #aa6600;
+    border-color: #cc8800;
+}
+QPushButton#stopBtn:hover {
+    background-color: #cc8800;
+}
+
+QPushButton#exitBtn {
+    background-color: #3a4a5a;
+    border-color: #5a6a7a;
+}
+QPushButton#exitBtn:hover {
+    background-color: #5a6a7a;
+}
+
+/* ----- ComboBox ----- */
+QComboBox {
+    border: 1px solid #1e3a5f;
+    border-radius: 5px;
+    padding: 4px 8px;
+    background-color: #1a3a5c;
+    color: #e0e8f0;
+    selection-background-color: #0066cc;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left: 1px solid #1e3a5f;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #0d1f3a;
+    selection-background-color: #0066cc;
+    color: #e0e8f0;
+}
+
+/* ----- Scroll Bars ----- */
+QScrollBar:vertical {
+    border: none;
+    background: #0d1f3a;
+    width: 12px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical {
+    background: #1e3a5f;
+    border-radius: 6px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #2a4a6f;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    border: none;
+    background: #0d1f3a;
+    height: 12px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #1e3a5f;
+    border-radius: 6px;
+    min-width: 20px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background: #2a4a6f;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+/* ----- Chart Styling ----- */
+QChartView {
+    background-color: #0d1f3a;
+    border: 1px solid #1e3a5f;
+    border-radius: 4px;
+}
+
+/* ----- Generic Value Labels ----- */
+QLabel[static="true"] {
+    font-size: 13pt;
+    font-weight: 500;
+}

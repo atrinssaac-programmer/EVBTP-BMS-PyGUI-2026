@@ -1,3 +1,9 @@
+/* ================================================================
+   ATRI Dark Theme - BMS Dashboard
+   Professional dark theme with high contrast for monitoring displays
+   ================================================================ */
+
+/* ----- Main Window & Containers ----- */
 QMainWindow {
     background-color: #121212;
 }
@@ -12,6 +18,7 @@ QWidget {
     background-color: #121212;
 }
 
+/* ----- Group Boxes ----- */
 QGroupBox {
     border: 2px solid #3E3E3E;
     border-radius: 8px;
@@ -21,32 +28,32 @@ QGroupBox {
 }
 
 QGroupBox::title {
+    subcontrol-origin: margin;
     left: 10px;
     padding: 0px 6px;
 }
 
+/* ----- Frames (used for tile blocks) ----- */
 QFrame {
     border: 1px solid #555555;
     border-radius: 4px;
 }
 
+/* ----- Title & Department Labels ----- */
 QLabel#title {
     color: #00FFFF;
     font-size: 24px;
     font-weight: bold;
+    background: transparent;
 }
 
 QLabel#deptitle {
     color: #808080;
     font-size: 12pt;
+    background: transparent;
 }
 
-QLabel#packValue {
-    color: #00FF80;
-    font-weight: bold;
-    font-size: 18px;
-}
-
+/* ----- Status-based label colors (for dynamic styling) ----- */
 QLabel[status="critical"] {
     color: #FF4040;
     font-weight: bold;
@@ -61,49 +68,148 @@ QLabel[status="normal"] {
     color: #00FF80;
 }
 
+/* ----- Buttons ----- */
 QPushButton {
     border-radius: 5px;
-    padding: 6px;
+    padding: 6px 12px;
     border: 1px solid #606060;
+    background-color: #2a2a2a;
+    color: #E0E0E0;
+    font-weight: 500;
 }
 
 QPushButton:hover {
     border: 1px solid #00FFFF;
+    background-color: #3a3a3a;
 }
 
+QPushButton:pressed {
+    background-color: #1a1a1a;
+}
+
+QPushButton:disabled {
+    color: #606060;
+    border-color: #404040;
+}
+
+/* Specific button identifiers (if used in code) */
 QPushButton#connectBtn {
     background-color: #006600;
+    border-color: #008800;
+}
+QPushButton#connectBtn:hover {
+    background-color: #008800;
 }
 
 QPushButton#disconnectBtn {
     background-color: #990000;
+    border-color: #cc0000;
+}
+QPushButton#disconnectBtn:hover {
+    background-color: #cc0000;
 }
 
 QPushButton#startBtn {
     background-color: #0044AA;
+    border-color: #0066cc;
+}
+QPushButton#startBtn:hover {
+    background-color: #0066cc;
 }
 
 QPushButton#stopBtn {
     background-color: #AA6600;
+    border-color: #cc8800;
+}
+QPushButton#stopBtn:hover {
+    background-color: #cc8800;
 }
 
 QPushButton#exitBtn {
     background-color: #555555;
+    border-color: #707070;
+}
+QPushButton#exitBtn:hover {
+    background-color: #707070;
 }
 
+/* ----- ComboBox ----- */
 QComboBox {
     border: 1px solid #606060;
-    padding: 4px;
+    border-radius: 5px;
+    padding: 4px 8px;
+    background-color: #2a2a2a;
+    color: #E0E0E0;
+    selection-background-color: #0066cc;
 }
 
-/* ----- Optional: QLabel for value fields (generic) ----- */
-QLabel#packValue {
-    color: #0f5b2e;
-    font-weight: bold;
-    font-size: 18px;
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left: 1px solid #606060;
 }
 
+QComboBox QAbstractItemView {
+    background-color: #1e1e1e;
+    selection-background-color: #0066cc;
+    color: #E0E0E0;
+}
+
+/* ----- Scroll Bars (for QScrollArea) ----- */
+QScrollBar:vertical {
+    border: none;
+    background: #1e1e1e;
+    width: 12px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:vertical {
+    background: #555555;
+    border-radius: 6px;
+    min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: #707070;
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    border: none;
+    background: #1e1e1e;
+    height: 12px;
+    border-radius: 6px;
+}
+
+QScrollBar::handle:horizontal {
+    background: #555555;
+    border-radius: 6px;
+    min-width: 20px;
+}
+
+QScrollBar::handle:horizontal:hover {
+    background: #707070;
+}
+
+QScrollBar::add-line:horizontal,
+QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+/* ----- Chart Styling ----- */
+QChartView {
+    background-color: #1e1e1e;
+    border: 1px solid #3E3E3E;
+    border-radius: 4px;
+}
+
+/* ----- Generic Value Labels ----- */
 QLabel[static="true"] {
-    font-size: 18pt;
+    font-size: 13pt;
     font-weight: 500;
 }
