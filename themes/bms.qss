@@ -1,0 +1,23 @@
+/* # minimal industrial style */
+QLabel#title {
+    font-size:24px;
+    font-weight:bold;
+}
+
+QLabel#deptitle {
+    font-size:14px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+QLabel#value {
+    font-size:16px;
+    font-weight:bold;
+}
+
+QProgressBar {
+    height:22px;
+}
+
+QLabel[state="warn"] { color: orange; }
+QLabel[state="alarm"] { color: red; }

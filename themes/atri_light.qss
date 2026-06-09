@@ -1,0 +1,210 @@
+/* ================================
+   ATRI Light Theme - BMS Dashboard
+   Professional, clean, high contrast
+   ================================ */
+
+/* ----- Main Window & Containers ----- */
+QMainWindow {
+    background-color: #f5f7fa;
+}
+
+QScrollArea {
+    border: none;
+    background-color: #f5f7fa;
+}
+
+QWidget {
+    color: #2c3e50;
+    background-color: #f5f7fa;
+}
+
+/* ----- Group Boxes ----- */
+QGroupBox {
+    border: 1px solid #d0d7de;
+    border-radius: 8px;
+    margin-top: 12px;
+    padding-top: 12px;
+    font-weight: bold;
+    background-color: #ffffff;
+    color: #1f2d3d;
+}
+
+QGroupBox::title {
+    left: 10px;
+    padding: 0px 6px;
+    background-color: #ffffff;
+    subcontrol-origin: margin;
+}
+
+/* ----- Frames (used for tile blocks) ----- */
+QFrame {
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    background-color: #ffffff;
+}
+
+/* ----- Title & Department Labels ----- */
+QLabel#title {
+    color: #0a5b8c;
+    font-size: 24px;
+    font-weight: bold;
+    background: transparent;
+}
+
+QLabel#deptitle {
+    color: #6c86a3;
+    font-size: 12pt;
+    background: transparent;
+}
+
+/* ----- Status-based label colors (for dynamic styling) ----- */
+QLabel[status="critical"] {
+    color: #d0312d;
+    font-weight: bold;
+}
+
+QLabel[status="warning"] {
+    color: #e67e22;
+    font-weight: bold;
+}
+
+QLabel[status="normal"] {
+    color: #2c7a4d;
+}
+
+/* ----- Buttons ----- */
+QPushButton {
+    border-radius: 5px;
+    padding: 6px 12px;
+    border: 1px solid #cbd5e1;
+    background-color: #ffffff;
+    color: #1e293b;
+    font-weight: 500;
+}
+
+QPushButton:hover {
+    border: 1px solid #3b82f6;
+    background-color: #eff6ff;
+}
+
+QPushButton:pressed {
+    background-color: #dbeafe;
+}
+
+/* Specific button identifiers (if used in code) */
+QPushButton#connectBtn {
+    background-color: #10b981;
+    border-color: #059669;
+    color: white;
+}
+QPushButton#connectBtn:hover {
+    background-color: #059669;
+}
+
+QPushButton#disconnectBtn {
+    background-color: #ef4444;
+    border-color: #dc2626;
+    color: white;
+}
+QPushButton#disconnectBtn:hover {
+    background-color: #dc2626;
+}
+
+QPushButton#startBtn {
+    background-color: #3b82f6;
+    border-color: #2563eb;
+    color: white;
+}
+QPushButton#startBtn:hover {
+    background-color: #2563eb;
+}
+
+QPushButton#stopBtn {
+    background-color: #f59e0b;
+    border-color: #d97706;
+    color: white;
+}
+QPushButton#stopBtn:hover {
+    background-color: #d97706;
+}
+
+QPushButton#exitBtn {
+    background-color: #94a3b8;
+    border-color: #64748b;
+    color: white;
+}
+QPushButton#exitBtn:hover {
+    background-color: #64748b;
+}
+
+/* ----- ComboBox ----- */
+QComboBox {
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    padding: 4px 8px;
+    background-color: #ffffff;
+    color: #1e293b;
+    selection-background-color: #3b82f6;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left: 1px solid #cbd5e1;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #ffffff;
+    selection-background-color: #e2e8f0;
+    color: #1e293b;
+}
+
+/* ----- Scroll Bars (for QScrollArea) ----- */
+QScrollBar:vertical {
+    border: none;
+    background: #e9eef3;
+    width: 12px;
+    border-radius: 6px;
+}
+QScrollBar::handle:vertical {
+    background: #b9c3cf;
+    border-radius: 6px;
+    min-height: 20px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #94a3b8;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+}
+
+QScrollBar:horizontal {
+    border: none;
+    background: #e9eef3;
+    height: 12px;
+    border-radius: 6px;
+}
+QScrollBar::handle:horizontal {
+    background: #b9c3cf;
+    border-radius: 6px;
+    min-width: 20px;
+}
+QScrollBar::handle:horizontal:hover {
+    background: #94a3b8;
+}
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0px;
+}
+
+/* ----- Optional: QLabel for value fields (generic) ----- */
+QLabel#packValue {
+    color: #0f5b2e;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+QLabel[static="true"] {
+    font-size: 13pt;
+    font-weight: 500;
+}

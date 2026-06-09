@@ -1,0 +1,109 @@
+QMainWindow {
+    background-color: #121212;
+}
+
+QScrollArea {
+    border: none;
+    background-color: #121212;
+}
+
+QWidget {
+    color: #E0E0E0;
+    background-color: #121212;
+}
+
+QGroupBox {
+    border: 2px solid #3E3E3E;
+    border-radius: 8px;
+    margin-top: 12px;
+    padding-top: 12px;
+    font-weight: bold;
+}
+
+QGroupBox::title {
+    left: 10px;
+    padding: 0px 6px;
+}
+
+QFrame {
+    border: 1px solid #555555;
+    border-radius: 4px;
+}
+
+QLabel#title {
+    color: #00FFFF;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+QLabel#deptitle {
+    color: #808080;
+    font-size: 12pt;
+}
+
+QLabel#packValue {
+    color: #00FF80;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+QLabel[status="critical"] {
+    color: #FF4040;
+    font-weight: bold;
+}
+
+QLabel[status="warning"] {
+    color: #FFA500;
+    font-weight: bold;
+}
+
+QLabel[status="normal"] {
+    color: #00FF80;
+}
+
+QPushButton {
+    border-radius: 5px;
+    padding: 6px;
+    border: 1px solid #606060;
+}
+
+QPushButton:hover {
+    border: 1px solid #00FFFF;
+}
+
+QPushButton#connectBtn {
+    background-color: #006600;
+}
+
+QPushButton#disconnectBtn {
+    background-color: #990000;
+}
+
+QPushButton#startBtn {
+    background-color: #0044AA;
+}
+
+QPushButton#stopBtn {
+    background-color: #AA6600;
+}
+
+QPushButton#exitBtn {
+    background-color: #555555;
+}
+
+QComboBox {
+    border: 1px solid #606060;
+    padding: 4px;
+}
+
+/* ----- Optional: QLabel for value fields (generic) ----- */
+QLabel#packValue {
+    color: #0f5b2e;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+QLabel[static="true"] {
+    font-size: 18pt;
+    font-weight: 500;
+}

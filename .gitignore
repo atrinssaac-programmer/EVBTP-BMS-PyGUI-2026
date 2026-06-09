@@ -1,0 +1,37 @@
+# Python compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+.env/
+.env.bak/
+env/
+
+# PlatformIO
+.pio/
+.platformio/
+
+# PySide6 / Qt Designer
+*.ui~
+*.qrc~
+
+# IDEs / Editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.bak
